@@ -10,6 +10,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], user
    
    stage ('jar file build') {
    steps {
+   sh 'cd ../dist/ '
    sh 'java -jar "SuperMiroGame.jar" '
    
    }
