@@ -6,11 +6,13 @@ steps {
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/astin2044327/Super-Mario-Java-2D-Game.git']]])
 
    }
+   }
    
-   stage ('java compile') {
+   stage ('jar file build') {
    steps {
-   sh 'javac 
+   sh 'java -jar "SuperMiroGame.jar" '
    
+   }
    }
    
    
